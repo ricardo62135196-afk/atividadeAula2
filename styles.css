@@ -5,110 +5,103 @@
     box-sizing: border-box;
 }
 
-.container {
-    width: 80%;
-    max-width: 700px;
-    margin: 30px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
 }
 
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #764ba2;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+/* Cada pergunta */
 .pergunta {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
+    background-color: #f9f8fc;
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    border-left: 4px solid #764ba2;
+    transition: transform 0.2s ease;
+}
+
+.pergunta:hover {
+    transform: translateX(4px);
 }
 
 .pergunta p {
     font-weight: bold;
-    margin-bottom: 8px;
-}
-
-label {
-    display: inline-block;
-    margin: 4px 0;
-    cursor: pointer;
-}
-
-#resultado {
-    margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #0077cc;
-}
-/* Corpo da página */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Cabeçalho */
-header {
-    background-color: #0077cc;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Menu */
-nav {
-    background-color: #005fa3;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ffd700;
-}
-
-/* Conteúdo principal */
-main {
-    width: 80%;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* Títulos */
-h1, h2 {
-    margin-bottom: 15px;
-}
-
-/* Parágrafos */
-p {
     margin-bottom: 10px;
+    color: #444;
+}
+
+/* Opções (labels) */
+label {
+    display: block;
+    padding: 8px 10px;
+    margin: 4px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+label:hover {
+    background-color: #ece7f6;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #764ba2;
+    cursor: pointer;
 }
 
 /* Botão */
 button {
-    background-color: #0077cc;
+    display: block;
+    width: 100%;
+    background-color: #764ba2;
     color: white;
     border: none;
-    padding: 10px 18px;
-    border-radius: 5px;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
     cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
 }
 
 button:hover {
-    background-color: #005fa3;
+    background-color: #5e3a85;
 }
 
-/* Rodapé */
-footer {
+/* Resultado */
+#resultado {
+    margin-top: 25px;
     text-align: center;
-    background-color: #333;
-    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #764ba2;
     padding: 15px;
-    margin-top: 20px;
+    background-color: #f3f0fa;
+    border-radius: 10px;
 }
