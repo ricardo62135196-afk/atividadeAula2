@@ -2,7 +2,7 @@ name: DEPLOY DE SITE COM GITHUB ACTIONS
 
 on:
   push:
-    branches:["main"]
+    branches: ["main"]
 
 permissions: 
   contents: read
@@ -22,4 +22,14 @@ jobs:
         - name: configurar o GitHub Pages
           uses: actions/configure-pages@v5
 
-        
+        #atualizado para @v3
+        - name: Upload dos arq do site
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: '.'
+
+        #atualizado para @v4
+        - name: Publicar no github pages
+          id: deployment
+          uses: actions/deploy-pages@v4
+          
