@@ -55,29 +55,7 @@
     <div id="resultado"></div>
 </div>
 
-<script>
-function corrigir() {
-    let respostas = {
-        q1: "b",
-        q2: "b",
-        q3: "a",
-        q4: "a",
-        q5: "b"
-    };
-
-    let pontos = 0;
-
-    for (let pergunta in respostas) {
-        let resposta = document.querySelector(`input[name="${pergunta}"]:checked`);
-        if (resposta && resposta.value === respostas[pergunta]) {
-            pontos++;
-        }
-    }
-
-    document.getElementById("resultado").innerHTML =
-        `Você acertou ${pontos} de 5 questões.`;
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
